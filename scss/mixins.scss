@@ -1,0 +1,88 @@
+// Webkit-style focus
+@mixin tab-focus() {
+  outline: 0px;
+  border-bottom: 2px solid $grey-light;
+}
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin box-sizing($style) {
+  -webkit-box-sizing: $style;
+  -moz-box-sizing: $style;
+  box-sizing: $style;
+}
+
+@mixin box-shadow($style) {
+  -webkit-box-shadow: $style;
+  -moz-box-shadow: $style;
+  box-shadow: $style;
+}
+
+@mixin border-radius($style) {
+  -webkit-border-radius: $style;
+  -moz-border-radius: $style;
+  border-radius: $style;
+}
+
+@mixin transition($style) {
+  -webkit-transition: $style;
+  -moz-transition: $style;
+  -ms-transition: $style;
+  -o-transition: $style;
+  transition: $style;
+}
+
+@mixin ie7-inline-block() {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+@mixin transparent-background($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  @extend .transparent-bg-ie;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}
+
+// Extend this class to save bytes
+.transparent-bg-ie {
+  background-color: transparent;
+  zoom: 1;
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+// Transforms
+@mixin transform($params) {
+  -webkit-transform: $params;
+  -moz-transform:    $params;
+  -ms-transform:     $params;
+  -o-transform:      $params;
+  transform:         $params;
+}

@@ -1,0 +1,37 @@
+.nav {
+  ul {
+    width: 100%;
+    > li {
+      display: block;
+      width: 100%;
+      padding: 4% 10%;
+      margin-bottom: 0.250em;
+      text-align: center;
+      &:hover {
+        border-left: 10px solid rgba($black, 0.1);
+        a {
+          margin-left: -10px;
+        }
+      }
+      &.active {
+        border-left: 10px solid rgba($black, 0.3);
+        a {
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+  a {
+    color: $link-color;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+}
+
+.toggle-nav {
+  display: none;
+}

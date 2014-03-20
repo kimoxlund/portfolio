@@ -1,0 +1,40 @@
+// Colors
+$black:                     #111;
+$grey-dark:                 #222;
+$grey:                      #666;
+$grey-light:                #888;
+$grey-lighter:              #ddd;
+$white:                     #e8d3af;
+$red:                       #7f3428;  // #7e2723
+$blue:                      #b6e5df;
+
+// Links
+$link-color:                #111;
+
+// States
+$success:                   #82b068;
+$error:                     tomato;
+
+// Buttons
+$button-border-color:       #222;
+$button-border-radius:      2em;
+$button-padding:            0.5em 1em;
+
+// Forms
+// -------------------------
+
+$input-bg:                       #fff;
+$input-bg-disabled:              $grey-lighter;
+
+$input-color:                    $grey;
+$input-border:                   #ccc;
+$input-border-radius:            0.125em;
+$input-border-focus:             #66afe9;
+
+$input-color-placeholder:        $grey-light;
+
+$input-height-base:              2em;
+
+$legend-color:                   $grey-dark;
+$legend-border-color:            #e5e5e5;
+

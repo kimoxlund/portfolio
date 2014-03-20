@@ -1,0 +1,106 @@
+body {
+
+  font-weight: 400;
+  font-style: normal;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  border-bottom: 1px solid $white;
+}
+
+p {
+  font-family: 'jaf-bernina-sans';
+  font-weight: 300;
+  margin: 0 0 2em 0;
+  line-height: 1.780em;
+  font-size: 1em;
+  letter-spacing: 0px;
+
+}
+
+h1,h2,h4,h6 {
+  font-family: "Miller Banner Black";
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 6em;
+  margin-bottom: 0.3em;
+  line-height: 1em;
+  color: $red;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.125;
+  font-weight: 500;
+  word-spacing: 5px;
+  margin-bottom: 0.250em;
+}
+
+h3 {
+  font-family: "jaf-bernina-sans";
+  font-size: 0.7em;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  padding-bottom: 4em;
+}
+
+h4, dt {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 8px;
+  margin-bottom: 0.5em;
+  font-family: "jaf-bernina-sans";
+}
+
+h5 {
+  font-size: 1em;
+  margin: 0 0;
+}
+
+small {
+  font-size: 0.7em;
+}
+
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: 2px solid rgba(0,0,0,0.2);
+  width: 30%;
+  margin-left: 35%;
+  margin-bottom: 0.85em;
+}
+
+ul {
+  margin: 0 0 1.45em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+dl {
+  font-family: "jaf-bernina-sans";
+  font-size: 1;
+  font-weight: 400;
+  dt {
+    margin-left: 8px;
+  }
+  dd {
+    line-height: 1.800em;
+  }
+}
+
+address {
+  font-style: normal;
+}

@@ -1,0 +1,220 @@
+@media (min-width: 1600px) {
+  body {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 960px) {
+
+  body {
+    font-size: 90%;
+    background-color: #222;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .mobile-header {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    background-color: #252525;
+    .mobile-brand {
+      width: 3em;
+      height: 3em;
+      float: right;
+      margin-right: 1.250em;
+      margin-top: 1em;
+      background: url(../img/cbp-logo.svg) top left no-repeat;
+      background-size: contain;
+    }
+ 
+  }
+
+  .header {
+    width: 15em;
+    margin-left: -15em;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    .address {
+    }
+    .nav {
+      ul {
+        padding-top: 7em;
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+  }
+
+  .content-header {
+    width: 100%;
+    position: static;
+    display: block;
+    height: 50%;
+  }
+
+  .content-main {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    z-index: 100;
+  }
+
+  .inner {
+    background-color: #fff;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+  }
+
+  .tagline {
+    dl {
+      font-size: 2em;
+    }
+  }
+
+    // Responsive menu
+  .toggle-nav {
+    display: block;
+    position: fixed;
+    top: 0em;
+    left: 0;
+    z-index: 100;
+    padding: 1.250em;
+    margin: 1em 1.250em;
+  }
+
+  .toggle-nav span {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    display: block;
+    width: 60%;
+    height: 4px;
+    margin-top: -2px;
+    font-size: 0px;
+    background-color: #ddd;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+  }
+
+  .toggle-nav span:before,
+  .toggle-nav span:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #ddd;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+  }
+
+  .toggle-nav span:before {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%);
+  }
+
+  .toggle-nav span:after {
+    -webkit-transform: translateY(250%);
+    transform: translateY(250%);
+  }
+
+  body.nav-open .toggle-nav span:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  body.nav-open .toggle-nav span:after {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  body.nav-open .toggle-nav {
+    border-radius: 50%;
+  }
+
+  body {
+    &.nav-open {
+      .header, .content {
+        -webkit-transform: translate3d(15em,0,0);
+      }
+      .content {
+        opacity: 0.4;
+        position: fixed;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content-header {
+    min-height: 8em;
+    background-image: none;
+    margin-bottom: 2em;
+    .image {
+      width: 100%;
+      height: 80%;
+      float: none;
+      display: block;
+    }
+    .tagline {
+      width: 100%;
+      height: 20%;
+      float: none;
+      dl {
+        text-align: center;
+        font-size: 1.25em;
+        font-weight: 300;
+        dd {
+          display: inline;
+          padding: 0 0.5em;
+          line-height: 1.800em;
+        }
+      }
+    }
+  }
+  .content {
+    margin-top: 5em;
+  }
+  .content-main {
+    padding: 0 1.250em;
+    .content-title {
+      width: 100%;
+      padding: 0;
+    }
+    .content-col-left {
+      width: 100%;
+      float: none;
+      display: block;
+      padding: 0;
+    }
+
+    .content-col-right {
+      width: 100%;
+      float: none;
+      display: block;
+      padding: 0;
+    }
+  }
+}
