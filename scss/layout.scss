@@ -10,6 +10,21 @@ body {
   font-variant-ligatures: common-ligatures;
 }
 
+.nav {
+  position: fixed;
+  bottom: 0;
+  color: $white;
+  z-index: 1000;
+  width: 55%;
+  text-align: center;
+  .arrow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 3px solid $white;
+    cursor: pointer;
+  }
+}
+
 .intro {
   position: fixed;
   .bio {
@@ -22,68 +37,68 @@ body {
   }
 }
 
-.wrapper {
-  @include transform(translatez(0));
+.project-info {
   position: absolute;
-  width: 100%;
-  min-height: 100%;
-  top: 100%;
-  bottom: 100%;
-}
-
-.project {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  position: relative;
-  background: $black;
-  overflow: hidden;
-  .project-title {
-    width: 40%;
-    position: absolute;
-    top: 15%;
-    left: 5%;
-    z-index: 1;
-    p {
-      width: 60%;
+  .project-description {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .project-title {
+      width: 85%;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      z-index: 1;
+      p {
+        width: 60%;
+      }
     }
   }
+}
+
+
+.project-screens {
+  @include transform(translatez(0));
+  position: fixed;
+  width: 100%;
+  top: 0em;
+  right: 0em;
+  bottom: 0em;
+}
+
+.screen {
+  @include transform(translatez(0));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  background: $black;
+  overflow: hidden;
+  .category {
+    position: absolute;
+    width: 5%;
+    text-align: right;
+    z-index: 200;
+    top: 15%;
+  }
   .project-bg {
-    width: 48%;
-    height: 58%;
-    left: 50%;
-    top: 2%;
+    width: 45%;
+    height: 60%;
+    left: 55%;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    video {
-      position: absolute;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -1000;
-      overflow: hidden;
-    }
-    .video-overlay {
-      background-image: url(../img/video-overlay.png);
-      position: absolute;
-      opacity: 0.2;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
   }
   .project-details {
-    //box-shadow: inset 0 0 60px rgba($black, 0.6);
     font-size: 0.9em;
-    width: 48%;
-    height: 38%;
+    width: 45%;
+    height: 40%;
     position: absolute;
-    bottom: 2%;
-    left: 50%;
+    bottom: 0;
+    left: 55%;
     padding: 1em;
     background-color: $red;
     color: rgba($white, 0.7);

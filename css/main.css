@@ -358,6 +358,19 @@ body {
   text-rendering: optimizeLegibility;
   font-variant-ligatures: common-ligatures; }
 
+.nav {
+  position: fixed;
+  bottom: 0;
+  color: #e8d3af;
+  z-index: 1000;
+  width: 55%;
+  text-align: center; }
+  .nav .arrow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 3px solid #e8d3af;
+    cursor: pointer; }
+
 .intro {
   position: fixed; }
   .intro .bio {
@@ -367,69 +380,72 @@ body {
   .intro h1 {
     margin-left: -27%; }
 
-.wrapper {
+.project-info {
+  position: absolute;
+  width: 50%;
+  height: 100%; }
+  .project-info .project-description {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .project-info .project-description .project-title {
+      width: 85%;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      z-index: 1; }
+      .project-info .project-description .project-title p {
+        width: 60%; }
+
+.project-screens {
   -webkit-transform: translatez(0);
   -moz-transform: translatez(0);
   -ms-transform: translatez(0);
   -o-transform: translatez(0);
   transform: translatez(0);
-  position: absolute;
+  position: fixed;
   width: 100%;
-  min-height: 100%;
-  top: 100%;
-  bottom: 100%; }
+  top: 0em;
+  right: 0em;
+  bottom: 0em; }
 
-.project {
+.screen {
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0%;
   background: #111111;
   overflow: hidden; }
-  .project .project-title {
-    width: 40%;
+  .screen .category {
     position: absolute;
-    top: 15%;
-    left: 5%;
-    z-index: 1; }
-    .project .project-title p {
-      width: 60%; }
-  .project .project-bg {
-    width: 48%;
-    height: 58%;
-    left: 50%;
-    top: 2%;
+    width: 5%;
+    text-align: right;
+    z-index: 200;
+    top: 15%; }
+  .screen .project-bg {
+    width: 45%;
+    height: 60%;
+    left: 55%;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center center; }
-    .project .project-bg video {
-      position: absolute;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -1000;
-      overflow: hidden; }
-    .project .project-bg .video-overlay {
-      background-image: url(../img/video-overlay.png);
-      position: absolute;
-      opacity: 0.2;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      z-index: 2; }
-  .project .project-details {
+  .screen .project-details {
     font-size: 0.9em;
-    width: 48%;
-    height: 38%;
+    width: 45%;
+    height: 40%;
     position: absolute;
-    bottom: 2%;
-    left: 50%;
+    bottom: 0;
+    left: 55%;
     padding: 1em;
     background-color: #7f3428;
     color: rgba(232, 211, 175, 0.7); }
-    .project .project-details:before {
+    .screen .project-details:before {
       content: "";
       display: block;
       width: 70%;
@@ -438,7 +454,7 @@ body {
       position: absolute;
       left: 15%;
       top: 50%; }
-    .project .project-details:after {
+    .screen .project-details:after {
       content: "";
       display: block;
       height: 50%;
@@ -447,13 +463,13 @@ body {
       position: absolute;
       left: 50%;
       top: 25%; }
-    .project .project-details .segment {
+    .screen .project-details .segment {
       width: 50%;
       height: 50%;
       float: left;
       display: table;
       text-align: center; }
-      .project .project-details .segment .inner {
+      .screen .project-details .segment .inner {
         display: table-cell;
         vertical-align: middle; }
 
@@ -678,7 +694,7 @@ label {
 
 @media (min-width: 1600px) {
   body {
-    font-size: 120%; } }
+    font-size: 130%; } }
 @media (max-width: 960px) {
   body {
     font-size: 90%;
