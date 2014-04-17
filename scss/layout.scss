@@ -1,6 +1,7 @@
 html,
 body,
 .wrapper {
+  width: 100%;
   height: 100%;
 }
 
@@ -8,33 +9,6 @@ body {
   background-color: $black;
   text-rendering: optimizeLegibility;
   font-variant-ligatures: common-ligatures;
-}
-
-.nav {
-  position: fixed;
-  bottom: 0;
-  color: $white;
-  z-index: 1000;
-  width: 55%;
-  text-align: center;
-  .arrow {
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 3px solid $white;
-    cursor: pointer;
-  }
-}
-
-.intro {
-  position: fixed;
-  .bio {
-    width: 30%;
-    margin-left: 30%;
-    margin-top: 15%;
-  }
-  h1 {
-    margin-left: -27%;
-  }
 }
 
 .project-info {
@@ -46,10 +20,10 @@ body {
     height: 100%;
     position: relative;
     .project-title {
-      width: 85%;
+      width: 80%;
       position: absolute;
       top: 15%;
-      left: 15%;
+      left: 20%;
       z-index: 1;
       p {
         width: 60%;
@@ -77,11 +51,14 @@ body {
   background: $black;
   overflow: hidden;
   .category {
+    font-size: 3em;
+    font-weight: 400;
     position: absolute;
-    width: 5%;
-    text-align: right;
+    left: 10%;
     z-index: 200;
-    top: 15%;
+    top: 5%;
+    text-align: right;
+    opacity: 0.1;
   }
   .project-bg {
     width: 45%;
@@ -136,3 +113,4 @@ body {
     }
   }
 }
+
