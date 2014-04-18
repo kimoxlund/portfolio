@@ -1,7 +1,5 @@
 $(function(){
 
-
-
     // Add nav toggle class
     $('.toggle-nav').click(function(){
         $('body').toggleClass('nav-open');
@@ -17,12 +15,7 @@ $(function(){
 
     });
 
-    var s = skrollr.init();
-
     $('.open-project').click(function(){
         $('.individual-project').toggleClass('project-open');
     });
-
-    $("body").css("display", "none");
-            $("body").fadeIn(2000);
 });

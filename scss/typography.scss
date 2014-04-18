@@ -1,24 +1,20 @@
 body {
-
-  font-weight: 400;
   font-style: normal;
-  color: $white;
 }
 
 a {
   text-decoration: none;
-  color: $white;
-  border-bottom: 1px solid $white;
+  color: $red;
+  font-weight: 500;
 }
 
 p {
-  font-family: 'jaf-bernina-sans';
+  font-family: 'Sentinel A', 'Sentinel B'; font-weight: 300; font-style: normal;
   font-weight: 300;
   margin: 0 0 2em 0;
   line-height: 1.780em;
-  font-size: 1em;
+  font-size: 1.1em;
   letter-spacing: 0px;
-
 }
 
 h1,h2,h4,h6 {
@@ -35,6 +31,11 @@ h1 {
   color: $red;
 }
 
+.big {
+  font-family: 'Sentinel A', 'Sentinel B'; font-weight: 300; font-style: normal;
+  color: $black;
+}
+
 h2 {
   font-size: 2em;
   line-height: 1.125;
@@ -44,27 +45,22 @@ h2 {
 }
 
 h3 {
-  font-family: "jaf-bernina-sans";
+  font-family: 'Archer A', 'Archer B'; font-weight: 400; font-style: normal;
   font-size: 0.7em;
   line-height: 2;
-  font-weight: 700;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  padding-bottom: 4em;
 }
 
 h4, dt {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 8px;
-  margin-bottom: 0.5em;
-  font-family: "jaf-bernina-sans";
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0em;
+  font-family: 'Archer A', 'Archer B'; font-weight: 500; font-style: normal;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 0 0;
+  font-family: 'Archer A', 'Archer B'; font-weight: 500; font-style: italic;
 }
 
 small {
@@ -103,4 +99,8 @@ dl {
 
 address {
   font-style: normal;
+}
+
+.text-right {
+  text-align: right;
 }

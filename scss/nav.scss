@@ -1,12 +1,11 @@
 .nav {
+  color: $black;
   ul {
     width: 100%;
     > li {
       display: block;
       width: 100%;
-      padding: 4% 10%;
       margin-bottom: 0.250em;
-      text-align: center;
       &:hover {
         border-left: 10px solid rgba($black, 0.1);
         a {
