@@ -14,18 +14,45 @@ body {
 }
 
 .header {
-  height: 25em;
+  position: relative;
+  height: 20em;
   color: $white;
-  background-color: $red;
+  background: $red url(../img/diamond-upholstery.png);
   h3 {
     font-size: 3em;
   }
 }
 
-.nav {
+.frame {
+  background:
+    url(../img/corner-top-left.svg) top left no-repeat,
+    url(../img/corner-top-right.svg) top right no-repeat,
+    url(../img/corner-bottom-left.svg) bottom left no-repeat,
+    url(../img/corner-bottom-right.svg) bottom right no-repeat;
+  background-size: 9px 9px;
+  padding: 0.5em;
+}
+
+.brand {
   padding: 0 2em;
-  height: 25em;
+  height: 20em;
   background-color: $white;
+  text-align: center;
+  padding-top: 2em;
+  a {
+    font-family: 'Archer A', 'Archer B'; font-weight: 500; font-style: normal;
+    color: $black;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.9;
+    .tagline {
+      display: block;
+      font-family: 'Sentinel A', 'Sentinel B'; font-weight: 300; font-style: normal;
+      font-weight: 300;
+      font-size: 0.625em;
+      font-style: italic;
+    }
+  }
 }
 
 .main {
@@ -35,25 +62,64 @@ body {
 }
 
 .row {
+  margin-left: -$internal-spacing-percent;
   padding: 0 5em;
 }
 
+a.project {
+  display: block;
+  position: relative;
+  @include transition(all 0.2s);
+  &:before, &:after {
+    @include transition(all 0.2s);
+    @include opacity(0);
+    content: "";
+    position: absolute;
+    z-index: 2000;
+    width: 6.250em;
+    height: 3.375em;
+    margin-left: -3.125em;
+    margin-top: -1.5625em;
+    left: 50%;
+    top: 50%;
+  }
+  &:before {
+    background: url(../img/plus-inv.svg) no-repeat;
+  }
+  &:after {
+    background: url(../img/corners-inv.svg) no-repeat;
+  }
+  &:hover {
+    .content-box .content {
+      -webkit-filter: grayscale(100%) brightness(0.8);
+    }
+    &:before {
+      @include opacity(1);
+    }
+    &:after {
+      @include opacity(1);
+      -webkit-transform: scale(1.25);
+    }
+  }
+}
+
 .content-box {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
   position: relative;
   width: 100%;
   height: 32em;
   display: inline-block;
 }
 .content {
+  @include transition(all 0.5s);
   width: 100%;
   height: 100%;
   display: table;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   padding: 2em;
+  .more {
+    margin: 2em auto 0 auto;
+  }
 }
 .content-copy {
   display: table-cell;
@@ -63,7 +129,6 @@ body {
   }
 }
 .title {
-  //-webkit-transform: rotate(-3deg);
   width: 80%;
   left: 10%;
   display: table;
@@ -79,8 +144,8 @@ body {
     color: $black;
     .category {
       display: block;
-      font-size: 0.6em;
-      padding: 0.5em 0;
+      font-size: 0.75em;
+      padding-top: 0.5em;
       font-family: 'Sentinel A', 'Sentinel B'; font-weight: 300; font-style: italic;
     }
   }
@@ -92,4 +157,8 @@ body {
 
 .border-top-bottom {
   border-bottom: 3px solid $black;
+}
+
+.opaque {
+  @include opacity(0.5);
 }
