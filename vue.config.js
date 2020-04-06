@@ -1,0 +1,24 @@
+module.exports = {
+  productionSourceMap: false,
+  // pwa: {
+  //   name: "Kim Oxlund",
+  //   themeColor: "#f06da9",
+  //   msTileColor: "#f06da9",
+  //   appleMobileWebAppCapable: "yes",
+  //   appleMobileWebAppStatusBarStyle: "black-translucent",
+  //   workboxPluginMode: "InjectManifest",
+  //   workboxOptions: {
+  //     swSrc: "./src/sw.js",
+  //     swDest: "service-worker.js"
+  //   }
+  // },
+
+  configureWebpack: {
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 250000
+      }
+    }
+  }
+};
