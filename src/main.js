@@ -4,6 +4,7 @@ import "./registerServiceWorker";
 import router from "./router";
 import { store } from "./store";
 import { VLazyImagePlugin } from "v-lazy-image";
+import VueGtag from "vue-gtag";
 import Page from "./components/Page";
 import Navigation from "./components/Navigation";
 import NavToggle from "./components/NavToggle";
@@ -12,6 +13,13 @@ import CaseMeta from "./components/CaseMeta";
 import PageLink from "./components/PageLink";
 
 Vue.use(VLazyImagePlugin);
+Vue.use(
+  VueGtag,
+  {
+    config: { id: process.env.VUE_APP_GA_KEY }
+  },
+  router
+);
 
 Vue.component("page", Page);
 Vue.component("navigation", Navigation);
