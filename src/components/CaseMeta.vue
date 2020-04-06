@@ -10,14 +10,15 @@
       <dd v-for="(role, i) in meta.role" :key="i">{{ role }}</dd>
     </dl>
 
-    <page-link
-      text="Launch Project"
-      v-if="meta.url"
-      :href="meta.url"
-      target="_blank"
-      rel="nofollow noopener"
-    >
-    </page-link>
+    <div class="case-link" v-if="meta.url">
+      <page-link
+        text="Launch Project"
+        :url="meta.url"
+        target="_blank"
+        rel="nofollow noopener"
+      >
+      </page-link>
+    </div>
   </div>
 </template>
 
@@ -32,6 +33,7 @@ export default {
 <style lang="css">
 .case-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   margin: 3.5rem 0;
   padding: 1.25rem 0 1.5rem 0;
@@ -39,9 +41,13 @@ export default {
   border-bottom: 1px solid var(--blue-3);
 }
 
+.case-link {
+  flex: 0 1 100%;
+}
+
 dl {
   margin: 0.5rem 0;
-  flex: 0 1 33%;
+  flex: 0 1 50%;
   font-size: 0.75rem;
 }
 
@@ -54,5 +60,16 @@ dt {
 dd {
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+@media only screen and (min-width: 500px) {
+  .case-link {
+    flex: 0 1 33.33333%;
+    text-align: right;
+  }
+
+  dl {
+    flex: 0 1 33.333333%;
+  }
 }
 </style>
