@@ -58,7 +58,7 @@ export default {
       caseMeta: {
         agency: ["Designstamp"],
         role: ["Visual Design", "Development"],
-        url: "https://formsapp-recbc.ca"
+        url: "https://formsapp.recbc.ca"
       }
     };
   }
