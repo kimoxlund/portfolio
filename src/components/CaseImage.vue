@@ -11,23 +11,36 @@ export default {
     src: String,
     placeholder: String,
     alt: String,
-    caption: String
-  }
+    caption: String,
+  },
 };
 </script>
 
 <style lang="css" scoped>
 figure {
   margin: var(--page-image-spacing) var(--page-image-indentation);
-  /* background-color: var(--blue-5);
-  padding: 2rem; */
 }
 
 figcaption {
-  margin-left: var(--page-spacing);
+  position: relative;
+  margin: var(--page-image-caption-margin-y) var(--page-image-caption-margin-x);
   flex: 0 0 12rem;
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   color: var(--text-white);
+  padding: var(--page-image-caption-padding-y)
+    var(--page-image-caption-padding-x);
+}
+
+figcaption:after {
+  content: "";
+  width: 1.5rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 1px solid var(--blue-3);
+  border-top: 1px solid var(--blue-3);
+  border-bottom: 1px solid var(--blue-3);
 }
 
 .v-lazy-image {

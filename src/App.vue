@@ -14,18 +14,18 @@
       <router-view />
     </transition>
 
-    <background-image></background-image>
+    <!-- <background-image></background-image> -->
   </div>
 </template>
 
 <script>
 import { gsap } from "gsap";
-import BackgroundImage from "./components/BackgroundImage";
+// import BackgroundImage from "./components/BackgroundImage";
 
 export default {
   name: "App",
   components: {
-    "background-image": BackgroundImage
+    // "background-image": BackgroundImage,
   },
 
   data() {
@@ -35,7 +35,7 @@ export default {
       hue: this.$route.meta.h,
       saturation: this.$route.meta.s,
       luminance: this.$route.meta.l,
-      opacity: 1
+      opacity: 1,
     };
   },
 
@@ -53,7 +53,7 @@ export default {
         y: 0,
         duration: 0.5,
         ease: "sine.out",
-        onComplete: done
+        onComplete: done,
       });
     },
 
@@ -63,7 +63,7 @@ export default {
         y: -30,
         duration: 0.5,
         ease: "sine.in",
-        onComplete: done
+        onComplete: done,
       });
     },
 
@@ -75,9 +75,9 @@ export default {
         duration: 1,
         delay: 0.5,
         ease: "sine.out",
-        onComplete: done
+        onComplete: done,
       });
-    }
+    },
   },
 
   computed: {
@@ -95,15 +95,15 @@ export default {
 
     gradient() {
       return {
-        background: `radial-gradient(farthest-corner at -15% -25%, hsl(${this.hue}, ${this.saturation}%, ${this.luminance}%) 0%, var(--blue-5) 80%)`
+        background: `radial-gradient(farthest-corner at -15% -25%, hsl(${this.hue}, ${this.saturation}%, ${this.luminance}%) 0%, var(--blue-5) 80%)`,
       };
     },
 
     navPush() {
       return {
-        transform: `translateY(${this.navTransform}%`
+        transform: `translateY(${this.navTransform}%`,
       };
-    }
+    },
   },
 
   watch: {
@@ -116,7 +116,7 @@ export default {
         hue: value.h.toFixed(0),
         saturation: value.s,
         luminance: value.l,
-        duration: 3
+        duration: 3,
       });
     },
 
@@ -124,11 +124,11 @@ export default {
       value
         ? gsap.to(this.$data, {
             luminance: this.$route.meta.l - 10,
-            duration: 2
+            duration: 2,
           })
         : gsap.to(this.$data, {
             luminance: this.$route.meta.l,
-            duration: 2
+            duration: 2,
           });
     },
 
@@ -136,15 +136,15 @@ export default {
       value
         ? gsap.to(this.$data, {
             navTransform: 0,
-            duration: 0.5
+            duration: 0.5,
           })
         : gsap.to(this.$data, {
             navTransform: -100,
             duration: 0.5,
-            delay: 0.5
+            delay: 0.5,
           });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -154,38 +154,33 @@ export default {
   --blue-4: hsl(229, 50%, 46%);
   --blue-3: hsl(229, 100%, 67%);
   --blue-2: hsl(219, 53%, 64%);
-  --blue-1: hsl(217, 53%, 88%);
+  --blue-1: hsl(217, 53%, 93%);
   --purple: hsl(264, 27%, 32%);
   --teal: hsl(188, 41%, 35%);
   --white: hsl(217, 53%, 83%);
 
-  --font-size-base: 15px;
+  --font-size-base: 13px;
   --font-size-h1: 2.5rem;
   --font-size-h2: 1.75rem;
   --line-height-base: 1.75;
   --line-height-heading: 1.45;
 
-  --bg-width: 100%;
-  --bg-max-width: auto;
-  --bg-top: 0;
-  --bg-right: 0;
-
   --nav-width: 100%;
   --nav-right: 0;
 
-  --page-top: 45vh;
+  --page-top: 10vh;
   --page-left: 5%;
   --page-right: 5%;
+  --page-content-top: 10vh;
   --page-image-spacing: 2rem;
   --page-image-indentation: 0;
+  --page-image-caption-padding-x: 3vw;
+  --page-image-caption-padding-y: 2vw;
 }
 
 @media only screen and (min-width: 800px) {
   :root {
-    --font-size-base: 18px;
-    --font-size-h1: 3.25rem;
-
-    --bg-width: 70%;
+    --font-size-base: 14px;
 
     --nav-width: 50%;
     --nav-right: 0;
@@ -193,64 +188,61 @@ export default {
     --page-top: 8%;
     --page-left: 5%;
     --page-right: 0;
-    --page-width: 30rem;
-    --page-width-narrow: 25rem;
+    --page-width: 60vw;
+    --page-width-narrow: 40vw;
     --page-header-width: 36rem;
     --page-image-spacing: 3rem;
     --page-image-indentation: 0;
+
+    --page-content-top: 20vh;
   }
 }
 
 @media only screen and (min-width: 980px) {
   :root {
-    --nav-width: 40%;
+    --nav-width: 45vw;
 
     --page-top: 8%;
     --page-left: 5%;
     --page-right: 0;
-    --page-width: 32rem;
-    --page-width-narrow: 25rem;
+
+    --font-size-h1: 3rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   :root {
-    --font-size-base: 18px;
-
     --bg-width: 60%;
-    --bg-right: 5%;
 
-    --page-width: 36rem;
-    --page-width-narrow: 32rem;
+    --page-width: 50vw;
     --page-header-width: 46rem;
-    --page-indentation: 3rem;
-    --page-image-spacing: 4rem;
+    --page-indentation: 4rem;
+    --page-image-spacing: 5rem;
     --page-image-indentation: 0rem;
+    --page-image-caption-margin-x: 6vw;
+    --page-image-caption-margin-y: 2vw;
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 2000px) {
   :root {
-    --bg-right: 8%;
-
-    --page-left: 10%;
+    --font-size-base: 17px;
+    --page-top: 10rem;
+    --page-left: 15vw;
+    --page-right: 10%;
+    --page-width: 40vw;
+    --page-width-narrow: 30vw;
+    --page-header-width: 46rem;
+    --page-indentation: 5rem;
+    --page-content-top: 25vh;
+    --page-image-spacing: 5rem;
+    --page-image-indentation: 0rem;
+    --page-image-caption-margin-x: 5rem;
+    --page-image-caption-margin-y: 2rem;
+    --page-image-caption-padding-x: 3rem;
+    --page-image-caption-padding-y: 2rem;
+    --nav-right: 5vw;
   }
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("assets/fonts/SpaceGrotesk-Light.woff2") format("woff2"),
-    url("assets/fonts/SpaceGrotesk-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("assets/fonts/SpaceGrotesk-Regular.woff2") format("woff2"),
-    url("assets/fonts/SpaceGrotesk-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 *,
@@ -283,7 +275,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "work-sans", sans-serif;
   font-weight: 400;
   line-height: var(--line-height-base);
   color: var(--blue-1);
@@ -291,6 +283,7 @@ body {
 }
 
 h1 {
+  margin-bottom: 3rem;
   font-family: titling-gothic-fb, sans-serif;
   font-size: var(--font-size-h1);
   font-weight: 300;

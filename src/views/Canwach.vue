@@ -5,9 +5,6 @@
       Canadian collaboration among 100 Members, including Associate Members, who
       are improving women’s and children’s health in 1000 communities worldwide.
     </p>
-
-    <case-meta :meta="caseMeta"></case-meta>
-
     <p>
       I joined 2paths and Designstamp to revamp CanWaCH's bilingual website to
       reflect their recent rebrand and wish to enhance member engagement, so we
@@ -16,12 +13,30 @@
       while still allowing CanWaCH staff to be in control of content and layout.
     </p>
 
+    <case-meta :meta="caseMeta"></case-meta>
+
     <case-image
       src="/img/work/canwach-1.jpg"
       placeholder="/img/work/canwach-1-pl.jpg"
       alt="CanWaCH homepage"
+      caption="The spotlight section on the homepage gave CanWaCH staff the ability to add important news and info on the homepage without cluttering the interface."
     ></case-image>
 
+    <case-image
+      src="/img/work/canwach-2.jpg"
+      placeholder="/img/work/canwach-2-pl.jpg"
+      alt="CanWaCH member profiles"
+      caption="Each CanWaCH member has their own brandable profile page showcasing their projects and contributed content"
+    ></case-image>
+
+    <case-image
+      src="/img/work/canwach-3.jpg"
+      placeholder="/img/work/canwach-3-pl.jpg"
+      alt="CanWaCH member profiles"
+      caption="The project Explorer includes over 500 projects around the globe. Flexible filters and an interactive cluster map helps users find projects whether they're looking for country or topic specific data."
+    ></case-image>
+
+    <h2>The build</h2>
     <p>
       We chose Drupal 8 as the CMS for it's flexible REST API, role based
       content authoring workflow and ability to fully customize the admin
@@ -45,13 +60,6 @@
       editors flexible styling capabilities while still keeping the code
       organized.
     </p>
-
-    <case-image
-      src="/img/work/canwach-2.jpg"
-      placeholder="/img/work/canwach-2-pl.jpg"
-      alt="CanWaCH member profiles"
-      caption="Each CanWaCH member would have their own themeable profile page showcasing their projects and contributed content"
-    ></case-image>
   </page>
 </template>
 
@@ -62,9 +70,9 @@ export default {
       caseMeta: {
         agency: ["2paths", "Designstamp"],
         role: ["Visual Design", "UX", "Front End Development"],
-        url: "https://canwach.ca"
-      }
+        tech: ["Drupal", "Angular"],
+      },
     };
-  }
+  },
 };
 </script>

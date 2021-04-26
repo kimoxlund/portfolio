@@ -14,13 +14,13 @@ export default {
   data() {
     return {
       opacity: 1,
-      left: 0
+      left: 0,
     };
   },
 
   props: {
     to: String,
-    title: String
+    title: String,
   },
 
   mounted() {
@@ -34,9 +34,9 @@ export default {
 
     random() {
       return {
-        left: `${this.left}%`
+        left: `${this.left}%`,
       };
-    }
+    },
   },
 
   watch: {
@@ -44,29 +44,29 @@ export default {
       value
         ? gsap.to(this.$data, {
             opacity: 0.5,
-            duration: Math.random() * 1
+            duration: Math.random() * 1,
           })
         : gsap.to(this.$data, {
             opacity: 1,
-            duration: Math.random() * 1
+            duration: Math.random() * 1,
           });
       value
         ? gsap.to(this.$data, {
-            left: Math.floor(Math.random() * (60 - 50 + 1) + 50),
+            left: Math.floor(Math.random() * (60 - 50 + 1) + 40),
             duration: Math.random() * (1.5 - 0.5 + 1) + 0.5,
             onUpdate: () => {
               this.$emit("onAnimation", this);
-            }
+            },
           })
         : gsap.to(this.$data, {
             left: Math.floor(Math.random() * 40 + 20),
             duration: Math.random() * (1.5 - 0.5 + 1) + 0.5,
             onUpdate: () => {
               this.$emit("onAnimation", this);
-            }
+            },
           });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -112,11 +112,11 @@ export default {
   }
   50% {
     opacity: 0;
-    transform: scale(6);
+    transform: scale(7);
   }
   100% {
     opacity: 0;
-    transform: scale(6);
+    transform: scale(7);
   }
 }
 </style>

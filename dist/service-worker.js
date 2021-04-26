@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a455994619845a8dcaeab92882b32430.js"
+  "/precache-manifest.e6d4367c72c941d86ef24cd85ad007e0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kim-oxlund"});

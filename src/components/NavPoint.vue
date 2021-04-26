@@ -8,7 +8,7 @@ export default {
     return {
       proximityMax: 1,
       proximityThreshold: 300,
-      opacity: 0
+      opacity: 0,
     };
   },
 
@@ -16,12 +16,12 @@ export default {
     to: String,
     mousePosition: {
       type: Object,
-      default: () => ({ x: 0, y: 0 })
+      default: () => ({ x: 0, y: 0 }),
     },
     position: {
       type: Object,
-      default: () => ({ x: 0, y: 0 })
-    }
+      default: () => ({ x: 0, y: 0 }),
+    },
   },
 
   mounted() {
@@ -60,10 +60,10 @@ export default {
           ",100%,50%,1), 0 0 20px " +
           Math.floor(this.proximity * 5) +
           "px hsla(240,100%,100%,1)",
-        transform: "scale(" + Math.max(1, this.proximity * 2) + ")"
+        transform: "scale(" + Math.max(1, this.proximity * 2.125) + ")",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

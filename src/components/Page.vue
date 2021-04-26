@@ -1,5 +1,8 @@
 <template>
-  <div class="ui-content" ref="scrollContainer">
+  <div
+    :class="[project ? 'ui-content' : 'ui-content ui-content--narrow']"
+    ref="scrollContainer"
+  >
     <intersect @enter="onEnter" @leave="onLeave"><div></div></intersect>
     <div class="page-title">
       <h1>{{ title }}</h1>
@@ -17,7 +20,7 @@ export default {
   components: { Intersect },
 
   props: {
-    title: String
+    title: String,
   },
 
   created() {
@@ -35,7 +38,7 @@ export default {
   computed: {
     project() {
       return this.$store.state.project;
-    }
+    },
   },
 
   methods: {
@@ -45,8 +48,8 @@ export default {
 
     onLeave() {
       this.$store.commit("setScroll", true);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -68,7 +71,7 @@ export default {
 }
 
 .ui-content--narrow {
-  width: var(--page-width-narrow);
+  padding-top: var(--page-content-top);
 }
 
 .page-title {

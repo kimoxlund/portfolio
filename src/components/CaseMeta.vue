@@ -1,13 +1,18 @@
 <template>
   <div class="case-meta">
-    <dl>
+    <dl v-if="meta.agency">
       <dt>Agency</dt>
       <dd v-for="(agency, i) in meta.agency" :key="i">{{ agency }}</dd>
     </dl>
 
-    <dl>
+    <dl v-if="meta.role">
       <dt>My Role</dt>
       <dd v-for="(role, i) in meta.role" :key="i">{{ role }}</dd>
+    </dl>
+
+    <dl v-if="meta.tech">
+      <dt>Tech</dt>
+      <dd v-for="(tech, i) in meta.tech" :key="i">{{ tech }}</dd>
     </dl>
 
     <div class="case-link" v-if="meta.url">
@@ -25,8 +30,8 @@
 <script>
 export default {
   props: {
-    meta: Object
-  }
+    meta: Object,
+  },
 };
 </script>
 
@@ -47,8 +52,8 @@ export default {
 
 dl {
   margin: 0.5rem 0;
-  flex: 0 1 50%;
-  font-size: 0.75rem;
+  flex: 0 1 auto;
+  font-size: 0.875rem;
 }
 
 dt {
@@ -64,12 +69,12 @@ dd {
 
 @media only screen and (min-width: 500px) {
   .case-link {
-    flex: 0 1 33.33333%;
+    flex: 1 0 auto;
     text-align: right;
   }
 
   dl {
-    flex: 0 1 33.333333%;
+    flex: 1 0 auto;
   }
 }
 </style>

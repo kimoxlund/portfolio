@@ -31,7 +31,7 @@ import NavPoint from "./NavPoint";
 export default {
   components: {
     "nav-link": NavLink,
-    "nav-point": NavPoint
+    "nav-point": NavPoint,
   },
 
   data() {
@@ -40,44 +40,54 @@ export default {
         {
           to: "/",
           title: "Home",
-          position: { x: 0, y: 0 }
+          position: { x: 0, y: 0 },
         },
+        // {
+        //   to: "/humana",
+        //   title: "Humana",
+        //   position: { x: 0, y: 0 }
+        // },
         {
-          to: "/humana",
-          title: "Humana",
-          position: { x: 0, y: 0 }
-        },
-        {
-          to: "/canwach",
-          title: "CanWaCH",
-          position: { x: 0, y: 0 }
-        },
-        {
-          to: "/pepfar",
-          title: "PEPFAR",
-          position: { x: 0, y: 0 }
-        },
-        {
-          to: "/unicorn-app",
-          title: "Unicorn App",
-          position: { x: 0, y: 0 }
+          to: "/ltsa",
+          title: "LTSA",
+          position: { x: 0, y: 0 },
         },
         {
           to: "/recbc",
           title: "RECBC",
-          position: { x: 0, y: 0 }
+          position: { x: 0, y: 0 },
         },
         {
-          to: "/ltsa",
-          title: "LTSA",
-          position: { x: 0, y: 0 }
-        }
+          to: "/athena-pathways",
+          title: "Athena Pathways",
+          position: { x: 0, y: 0 },
+        },
+        {
+          to: "/whiteleaf-interior",
+          title: "Whiteleaf Interior",
+          position: { x: 0, y: 0 },
+        },
+        {
+          to: "/pepfar",
+          title: "PEPFAR",
+          position: { x: 0, y: 0 },
+        },
+        {
+          to: "/canwach",
+          title: "CanWaCH",
+          position: { x: 0, y: 0 },
+        },
+        // {
+        //   to: "/unicorn-app",
+        //   title: "Unicorn App",
+        //   position: { x: 0, y: 0 },
+        // },
       ],
       mousePosition: { x: 0, y: 0 },
       scrollPosition: {
         left: document.body.scrollLeft + document.documentElement.scrollLeft,
-        top: document.body.scrollTop + document.documentElement.scrollTop
-      }
+        top: document.body.scrollTop + document.documentElement.scrollTop,
+      },
     };
   },
 
@@ -94,13 +104,13 @@ export default {
   computed: {
     coordinates() {
       return this.navigation
-        .map((value) => Object.values(value.position))
+        .map(value => Object.values(value.position))
         .reduce((p, n) => p.concat(n), []);
     },
 
     polyline() {
       return this.coordinates.join(" ");
-    }
+    },
   },
 
   methods: {
@@ -115,11 +125,11 @@ export default {
 
         this.navigation[i].position = {
           x: rect.left + rect.width / 2 + this.scrollPosition.left,
-          y: rect.top + rect.height / 2 + this.scrollPosition.top
+          y: rect.top + rect.height / 2 + this.scrollPosition.top,
         };
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -179,11 +189,11 @@ nav {
   }
   50% {
     opacity: 0;
-    transform: scale(6);
+    transform: scale(8);
   }
   100% {
     opacity: 0;
-    transform: scale(6);
+    transform: scale(8);
   }
 }
 

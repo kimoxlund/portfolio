@@ -18,12 +18,12 @@ import { gsap } from "gsap";
 export default {
   data() {
     return {
-      imageOpacity: 1
+      imageOpacity: 1,
     };
   },
 
   props: {
-    src: String
+    src: String,
   },
 
   computed: {
@@ -33,7 +33,7 @@ export default {
 
     isScrolled() {
       return this.state.scrolled;
-    }
+    },
   },
 
   methods: {
@@ -44,7 +44,7 @@ export default {
         duration: 0.4,
         delay: this.state.project ? 0.5 : 0,
         ease: "sine.out",
-        onComplete: done
+        onComplete: done,
       });
     },
 
@@ -54,9 +54,9 @@ export default {
         duration: 0.4,
         delay: this.state.project ? 0.25 : 0,
         ease: "sine.in",
-        onComplete: done
+        onComplete: done,
       });
-    }
+    },
   },
 
   watch: {
@@ -64,14 +64,14 @@ export default {
       value
         ? gsap.to(this.$data, {
             imageOpacity: 0.2,
-            duration: 2
+            duration: 2,
           })
         : gsap.to(this.$data, {
             imageOpacity: 1,
-            duration: 2
+            duration: 2,
           });
-    }
-  }
+    },
+  },
 };
 </script>
 

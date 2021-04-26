@@ -12,9 +12,9 @@ const routes = [
       h: 0,
       s: 30,
       l: 40,
-      bg: "/img/bg/chair.jpg"
     },
-    component: () => import(/* webpackChunkName: "views" */ "../views/Home.vue")
+    component: () =>
+      import(/* webpackChunkName: "views" */ "../views/Home.vue"),
   },
   {
     path: "/canwach",
@@ -24,10 +24,9 @@ const routes = [
       h: 358,
       s: 87,
       l: 33,
-      bg: "/img/bg/canwach-bg.jpg"
     },
     component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Canwach.vue")
+      import(/* webpackChunkName: "views" */ "../views/Canwach.vue"),
   },
   {
     path: "/unicorn-app",
@@ -37,10 +36,9 @@ const routes = [
       h: 333,
       s: 81,
       l: 50,
-      bg: "/img/bg/unicorns-bg.jpg"
     },
     component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Unicorn.vue")
+      import(/* webpackChunkName: "views" */ "../views/Unicorn.vue"),
   },
   {
     path: "/pepfar",
@@ -50,10 +48,9 @@ const routes = [
       h: 207,
       s: 100,
       l: 25,
-      bg: "/img/bg/pepfar-bg.jpg"
     },
     component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Pepfar.vue")
+      import(/* webpackChunkName: "views" */ "../views/Pepfar.vue"),
   },
   {
     path: "/ltsa",
@@ -63,9 +60,9 @@ const routes = [
       h: 222,
       s: 54,
       l: 40,
-      bg: "/img/bg/ltsa-bg.jpg"
     },
-    component: () => import(/* webpackChunkName: "views" */ "../views/Ltsa.vue")
+    component: () =>
+      import(/* webpackChunkName: "views" */ "../views/Ltsa.vue"),
   },
   {
     path: "/humana",
@@ -75,10 +72,9 @@ const routes = [
       h: 95,
       s: 49,
       l: 30,
-      bg: "/img/bg/humana-bg.jpg"
     },
     component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Humana.vue")
+      import(/* webpackChunkName: "views" */ "../views/Humana.vue"),
   },
   {
     path: "/recbc",
@@ -88,15 +84,38 @@ const routes = [
       h: 214,
       s: 100,
       l: 40,
-      bg: "/img/bg/recbc-bg.jpg"
     },
     component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Recbc.vue")
-  }
+      import(/* webpackChunkName: "views" */ "../views/Recbc.vue"),
+  },
+  {
+    path: "/whiteleaf-interior",
+    name: "Whiteleaf Interior Painting",
+    meta: {
+      project: true,
+      h: 173,
+      s: 6,
+      l: 39,
+    },
+    component: () =>
+      import(/* webpackChunkName: "views" */ "../views/Whiteleaf.vue"),
+  },
+  {
+    path: "/athena-pathways",
+    name: "Athena Pathways",
+    meta: {
+      project: true,
+      h: 249,
+      s: 80,
+      l: 60,
+    },
+    component: () =>
+      import(/* webpackChunkName: "views" */ "../views/Athena.vue"),
+  },
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
 });
 
 export default router;

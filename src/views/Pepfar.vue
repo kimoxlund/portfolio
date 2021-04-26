@@ -6,9 +6,6 @@
       the United States is the single largest donor to global HIV/AIDS efforts
       in the world.
     </p>
-
-    <case-meta :meta="caseMeta"></case-meta>
-
     <p>
       I joined 2paths and Designstamp for two years working on visual design and
       front end development for the PEPFAR dashboards. An ongoing initiative to
@@ -16,6 +13,30 @@
       transparency.
     </p>
 
+    <case-meta :meta="caseMeta"></case-meta>
+
+    <case-image
+      src="/img/work/pepfar-1.jpg"
+      placeholder="/img/work/pepfar-1-pl.jpg"
+      alt="Pepfar Dashboards"
+      caption="Rich views including interactive charts help guide viewers and provide them in-depth access to the data."
+    ></case-image>
+
+    <case-image
+      src="/img/work/pepfar-2.png"
+      placeholder="/img/work/pepfar-2-pl.png"
+      alt="Pepfar Dashboards mobile screens"
+      caption="The detailed visualizations and complex filters were designed to be accessible on all screen sizes."
+    ></case-image>
+
+    <case-image
+      src="/img/work/pepfar-3.jpg"
+      placeholder="/img/work/pepfar-3-pl.jpg"
+      alt="Pepfar Dashboards mobile screens"
+      caption="The dashboards provide comparison views to help the viewer compare data across countries"
+    ></case-image>
+
+    <h2>Technical Details</h2>
     <p>
       With frequent change in stakeholders who each had their own vision for the
       dashboards, it was important that the UI components were flexible and easy
@@ -29,14 +50,6 @@
       the team clearly distinguish between layout and component HTML in
       situations where I was not able to work on the page templates.
     </p>
-
-    <case-image
-      src="/img/work/pepfar-1.jpg"
-      placeholder="/img/work/pepfar-1-pl.jpg"
-      alt="Pepfar Dashboards"
-      caption="Rich views including interactive charts help guide viewers and provide them in-depth access to the data."
-    ></case-image>
-
     <p>
       One of the key challenges was making sure the application followed the
       Section 508 accessibility requirements for U.S. federal agencies. This
@@ -55,9 +68,10 @@ export default {
     return {
       caseMeta: {
         agency: ["2paths", "Designstamp"],
-        role: ["Visual Design", "Front End Development"]
-      }
+        role: ["Visual Design", "Front End Development"],
+        tech: ["Angular", "MongoDB", "D3"],
+      },
     };
-  }
+  },
 };
 </script>

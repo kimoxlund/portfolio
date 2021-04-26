@@ -1,12 +1,10 @@
 <template>
-  <page title="LTSA" type="case">
+  <page title="Land Title and Survey Authority of British Columbia" type="case">
     <p class="lead">
       LTSA is responsible for providing reliable land title and survey systems
       to B.C. The systems are used on a daily basis by lawyers, notaries,
       government and real estate professionals.
     </p>
-
-    <case-meta :meta="caseMeta"></case-meta>
 
     <p>
       Together With Designstamp I have worked with LTSA since 2015, initially
@@ -16,12 +14,30 @@
       their internal enterprise applications.
     </p>
 
+    <case-meta :meta="caseMeta"></case-meta>
+
     <case-image
-      src="/img/work/ltsa-2.jpg"
-      placeholder="/img/work/ltsa-2-pl.jpg"
-      alt="Pepfar Dashboards"
+      src="/img/work/ltsa-1.png"
+      placeholder="/img/work/ltsa-1-pl.png"
+      alt="LTSA design system"
+      caption="The design system was created to be the foundation of all future products and helps LTSA maintain a unified design language across many different teams and vendors."
     ></case-image>
 
+    <case-image
+      src="/img/work/ltsa-2.png"
+      placeholder="/img/work/ltsa-2-pl.png"
+      alt="LTSA page template design"
+      caption="To help the external development team focus on the technical aspect of Web Filing, we assisted with creating HTML templates the development team could port directly to their Angular app."
+    ></case-image>
+
+    <case-image
+      src="/img/work/ltsa-3.png"
+      placeholder="/img/work/ltsa-3-pl.png"
+      alt="LTSA help site"
+      caption="After finishing the design system, the 2020 redesign of their help site was the first public facing project to utilize the system."
+    ></case-image>
+
+    <h2>Technical Details</h2>
     <p>
       With several different products on the go and having to rely on external
       vendors for development, it became increasingly clear that LTSA needed a
@@ -32,13 +48,6 @@
       could reference the library when creating wireframes and developers could
       grab component code.
     </p>
-
-    <case-image
-      src="/img/work/ltsa-1.jpg"
-      placeholder="/img/work/ltsa-1-pl.jpg"
-      alt="Pepfar Dashboards"
-      caption="Styleguide including components, UI patterns and finished page templates"
-    ></case-image>
 
     <p>
       This became a living style guide where we would make frequent styling
@@ -58,10 +67,11 @@ export default {
     return {
       caseMeta: {
         agency: ["Designstamp"],
-        role: ["Visual Design", "Front End Development"],
-        url: "https://ltsa-styleguide.designstamp.com"
-      }
+        role: ["Visual Design", "Front End Development", "Drupal Development"],
+        tech: ["Drupal", "Vue"],
+        url: "https://ltsa-styleguide.designstamp.com",
+      },
     };
-  }
+  },
 };
 </script>
