@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "378e6daec624419d863d",
+    "revision": "bb283d4298ba2821bf04",
     "url": "/css/app~d0ae3f07.6c0901ef.css"
   },
   {
@@ -58,6 +58,34 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "428170439ef9e6053164e3b4a5b593dd",
     "url": "/img/bg/unicorns-bg.jpg"
+  },
+  {
+    "revision": "e9586540da8424da03419905b0bbeb30",
+    "url": "/img/icons/android-chrome-192x192.png"
+  },
+  {
+    "revision": "75d48d8c507cbfafb866ea6b0a868d9d",
+    "url": "/img/icons/android-chrome-512x512.png"
+  },
+  {
+    "revision": "223831a409f44b79e555945bc3d3cece",
+    "url": "/img/icons/apple-touch-icon.png"
+  },
+  {
+    "revision": "09d6eee0492421cf32a2405818ea1c8e",
+    "url": "/img/icons/favicon-16x16.png"
+  },
+  {
+    "revision": "defe365b7df63236ca4cfe64bf9c3c14",
+    "url": "/img/icons/favicon-32x32.png"
+  },
+  {
+    "revision": "27f45d3c252f97257e28dbf788de2819",
+    "url": "/img/icons/favicon.ico"
+  },
+  {
+    "revision": "053100cb84a50d2ae7f5492f7dd7f25e",
+    "url": "/img/icons/site.webmanifest"
   },
   {
     "revision": "3c47320c177f6299392fdc3a862db98b",
@@ -212,12 +240,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/work/whiteleaf-3.jpg"
   },
   {
-    "revision": "4fd39eb8ff8e16e0e317155f274c2be9",
+    "revision": "cdf005d9c90b3854019318363a427a8a",
     "url": "/index.html"
   },
   {
-    "revision": "378e6daec624419d863d",
-    "url": "/js/app~d0ae3f07.ccc4349b.js"
+    "revision": "bb283d4298ba2821bf04",
+    "url": "/js/app~d0ae3f07.9c0cedf3.js"
   },
   {
     "revision": "ca471ee57fb077006b17",
@@ -248,7 +276,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/views~33d48c78.1cc1ac8b.js"
   },
   {
-    "revision": "36832a9444a3033be8ae8040b22a1465",
+    "revision": "1ee8236544f45703812c23de896a1b86",
     "url": "/manifest.json"
   },
   {

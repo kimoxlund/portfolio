@@ -16,7 +16,7 @@ Vue.use(VLazyImagePlugin);
 Vue.use(
   VueGtag,
   {
-    config: { id: process.env.VUE_APP_GA_KEY }
+    config: { id: process.env.VUE_APP_GA_KEY },
   },
   router
 );
@@ -33,5 +33,5 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  render: (h) => h(App)
+  render: h => h(App),
 }).$mount("#app");

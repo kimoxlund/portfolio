@@ -14,16 +14,14 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.df42c57dbdc28ca46c11fd53b4a06d78.js"
+  "/precache-manifest.9b9bdae36e6d1dda99943a26d4772432.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kim-oxlund"});
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.skipWaiting();
+
+workbox.core.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

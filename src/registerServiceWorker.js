@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 import { register } from "register-service-worker";
 
 if (process.env.NODE_ENV === "production") {
@@ -10,8 +9,12 @@ if (process.env.NODE_ENV === "production") {
           "For more details, visit https://goo.gl/AFskqB"
       );
     },
-    registered() {
+    registered(registration) {
       console.log("Service worker has been registered.");
+      setInterval(() => {
+        console.log("sw check");
+        registration.update();
+      }, 10000);
     },
     cached() {
       console.log("Content has been cached for offline use.");
@@ -21,6 +24,7 @@ if (process.env.NODE_ENV === "production") {
     },
     updated() {
       console.log("New content is available; please refresh.");
+      window.location.reload(true);
     },
     offline() {
       console.log(
@@ -29,6 +33,6 @@ if (process.env.NODE_ENV === "production") {
     },
     error(error) {
       console.error("Error during service worker registration:", error);
-    }
+    },
   });
 }
