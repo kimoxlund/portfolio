@@ -1,7 +1,7 @@
 <template>
   <page title="Whiteleaf Interior Painting" type="case">
     <p class="lead">
-      Minimalistic site built to showcase the beatiful work of newly launched
+      Minimalistic site built to showcase the beautiful work of newly launched
       local interior painting company.
     </p>
 
