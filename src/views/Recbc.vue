@@ -31,8 +31,8 @@
     ></case-image>
 
     <case-image
-      src="/img/work/recbc-3.jpg"
-      placeholder="/img/work/recbc-1-pl.jpg"
+      src="/img/work/recbc-3.png"
+      placeholder="/img/work/recbc-3-pl.jpg"
       alt="Knowledge base"
       caption="The accompanying knowledge base website was designed to cater to different learning styles and provides readers with useful filters to find the content they are most interested in."
     ></case-image>
