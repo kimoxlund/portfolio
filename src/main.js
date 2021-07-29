@@ -16,7 +16,7 @@ Vue.use(VLazyImagePlugin);
 Vue.use(
   VueGtag,
   {
-    config: { id: process.env.VUE_APP_GA_KEY },
+    config: { id: "UA-47326749-1" },
   },
   router
 );
