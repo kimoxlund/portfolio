@@ -48,6 +48,11 @@ export default {
         //   position: { x: 0, y: 0 }
         // },
         {
+          to: "/thinkific",
+          title: "Thinkific",
+          position: { x: 0, y: 0 },
+        },
+        {
           to: "/ltsa",
           title: "LTSA",
           position: { x: 0, y: 0 },
@@ -57,11 +62,11 @@ export default {
           title: "RECBC",
           position: { x: 0, y: 0 },
         },
-        {
-          to: "/athena-pathways",
-          title: "Athena Pathways",
-          position: { x: 0, y: 0 },
-        },
+        // {
+        //   to: "/athena-pathways",
+        //   title: "Athena Pathways",
+        //   position: { x: 0, y: 0 },
+        // },
         {
           to: "/whiteleaf-interior",
           title: "Whiteleaf Interior",

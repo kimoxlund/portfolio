@@ -13,8 +13,18 @@ const routes = [
       s: 30,
       l: 40,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Home.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Home.vue"),
+  },
+  {
+    path: "/thinkific",
+    name: "Thinkific",
+    meta: {
+      project: true,
+      h: 15,
+      s: 31,
+      l: 56,
+    },
+    component: () => import(/* webpackChunkName: "views" */ "../views/Thinkific.vue"),
   },
   {
     path: "/canwach",
@@ -25,8 +35,7 @@ const routes = [
       s: 87,
       l: 33,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Canwach.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Canwach.vue"),
   },
   {
     path: "/unicorn-app",
@@ -37,8 +46,7 @@ const routes = [
       s: 81,
       l: 50,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Unicorn.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Unicorn.vue"),
   },
   {
     path: "/pepfar",
@@ -49,8 +57,7 @@ const routes = [
       s: 100,
       l: 25,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Pepfar.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Pepfar.vue"),
   },
   {
     path: "/ltsa",
@@ -61,8 +68,7 @@ const routes = [
       s: 54,
       l: 40,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Ltsa.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Ltsa.vue"),
   },
   {
     path: "/humana",
@@ -73,8 +79,7 @@ const routes = [
       s: 49,
       l: 30,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Humana.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Humana.vue"),
   },
   {
     path: "/recbc",
@@ -85,8 +90,7 @@ const routes = [
       s: 100,
       l: 40,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Recbc.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Recbc.vue"),
   },
   {
     path: "/whiteleaf-interior",
@@ -97,8 +101,7 @@ const routes = [
       s: 6,
       l: 39,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Whiteleaf.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Whiteleaf.vue"),
   },
   {
     path: "/athena-pathways",
@@ -109,8 +112,7 @@ const routes = [
       s: 80,
       l: 60,
     },
-    component: () =>
-      import(/* webpackChunkName: "views" */ "../views/Athena.vue"),
+    component: () => import(/* webpackChunkName: "views" */ "../views/Athena.vue"),
   },
 ];
 

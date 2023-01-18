@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0d6c2f1bbb0ba9f788f3",
+    "revision": "f549ba675907855ab753",
     "url": "/css/app~d0ae3f07.6c0901ef.css"
   },
   {
@@ -208,6 +208,50 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/work/recbc-3.png"
   },
   {
+    "revision": "cc23c39143b86a465a7a6e0034227996",
+    "url": "/img/work/thinkific-1-pl.jpg"
+  },
+  {
+    "revision": "9185e75da4b5838e9067378cb7716a43",
+    "url": "/img/work/thinkific-1.jpg"
+  },
+  {
+    "revision": "6a11d4bf1857695603ad6c4cab1985a1",
+    "url": "/img/work/thinkific-2-pl.jpg"
+  },
+  {
+    "revision": "aaaccdff1cd3f4fb4a3cdd2f2887e772",
+    "url": "/img/work/thinkific-2.jpg"
+  },
+  {
+    "revision": "1a048a1bb774fa4838bea88410305298",
+    "url": "/img/work/thinkific-3.jpg"
+  },
+  {
+    "revision": "7cd215528e5442dbd472ba345d0d6e7f",
+    "url": "/img/work/thinkific-4-pl.jpg"
+  },
+  {
+    "revision": "a74ab109a762b7d143c0f598753efe02",
+    "url": "/img/work/thinkific-4.jpg"
+  },
+  {
+    "revision": "320a0f327bef03c555efc44eaee84cb0",
+    "url": "/img/work/thinkific-wireframe-pl.jpg"
+  },
+  {
+    "revision": "9c8e48298fadb4b91f19a12cc4e9f825",
+    "url": "/img/work/thinkific-wireframe.jpg"
+  },
+  {
+    "revision": "f382a9524ffa1677ff4569e51cdb47da",
+    "url": "/img/work/thnikific-2-pl.jpg"
+  },
+  {
+    "revision": "18524b7d2b06d85cd53488618a5960bf",
+    "url": "/img/work/thnikific-3-pl.jpg"
+  },
+  {
     "revision": "b0a1383d4bc14ea7256f384d3aff7ce4",
     "url": "/img/work/unicorns-1-pl.png"
   },
@@ -240,12 +284,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/work/whiteleaf-3.jpg"
   },
   {
-    "revision": "27df773b535181f58f03a608c92a3d2c",
+    "revision": "c9a8f942303f617c4064d41a6b28a018",
     "url": "/index.html"
   },
   {
-    "revision": "0d6c2f1bbb0ba9f788f3",
-    "url": "/js/app~d0ae3f07.68fdcb36.js"
+    "revision": "f549ba675907855ab753",
+    "url": "/js/app~d0ae3f07.4ea5ae31.js"
   },
   {
     "revision": "ca471ee57fb077006b17",
@@ -272,8 +316,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-vendors~fdc6512a.7d4a17a1.js"
   },
   {
-    "revision": "f211d9d00e9dfb3bc4d8",
-    "url": "/js/views~33d48c78.f6ddebb2.js"
+    "revision": "5f7705bd73793d92ebb6",
+    "url": "/js/views~33d48c78.80d1e09b.js"
   },
   {
     "revision": "1ee8236544f45703812c23de896a1b86",
